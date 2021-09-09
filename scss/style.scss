@@ -1,0 +1,166 @@
+
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,700&display=swap");
+
+/*************************
+varaibles
+*************************/
+$black: #000;
+$white: #fff;
+$lightgray: #f7f7f7;
+$gray: #333;
+$transition: 0.3s ease;
+$font: 16px;
+$fontFamily: "Roboto",
+sans-serif;
+$boxShadow: 0 0 10px #b7b6b6;
+$textShadow: 0 0 2px #333;
+
+/*************************
+mixins 
+*************************/
+@mixin novaKol {
+    height: 60vh;
+    background-position: center;
+    background-size: cover;
+    flex: 1;
+}
+
+/*************************
+basic styles
+*************************/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: $fontFamily;
+    font-size: $font;
+    color: $gray;
+    line-height: 1.6;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+    font-weight: 700 !important;
+    color: $black;
+}
+
+/*************************
+nav
+*************************/
+nav{
+  .container-fluid{
+    .logo2{
+      width: 10%;
+      img{
+        width: 100%;
+      }
+    }
+    .meni{
+      ul{
+        display: flex;
+        list-style: none;
+        li{
+          margin-right: 15px;
+          a{
+            color: $black;
+            font-size: 1.5rem;
+            &:hover{
+              color: $gray;
+            }
+          }
+        }
+      }
+    }
+    .navAbout{
+      span{
+        a{
+          font-size: 2rem;
+          color: $black;
+          font-weight: 700;
+          margin-right: 15px;
+          &:hover{
+            text-decoration: underline;
+            transition: $transition;
+          }
+        }
+      }
+    }
+  }
+}
+
+
+/*************************
+header
+*************************/
+header {
+    height: 100vh;
+    background: url(../img/04.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+/*************************
+novaKolekcija
+*************************/
+.novaKolekcija {
+    article:nth-child(1) {
+        background: url(../img/02-min.jpg);
+        @include novaKol;
+    }
+
+    article:nth-child(2) {
+        background: url(../img/04-min.jpg);
+        @include novaKol;
+    }
+
+    article:nth-child(3) {
+        background: url(../img/06-min.jpg);
+        @include novaKol;
+    }
+}
+
+/*************************
+footer
+*************************/
+footer {
+    background: $black;
+
+    .col-md-4:last-child {
+
+        i {
+            font-size: 2rem;
+            margin-right: 15px;
+            color: $white;
+
+            &:hover {
+                transform: rotate(45deg);
+                transition: $transition;
+            }
+        }
+    }
+
+}
+.sekcijaAbout {
+    padding-top: 30vh;
+}
+/*************************
+blog
+*************************/
+.blog{
+  .col-md-4{
+    .featured-image{
+      img{
+        width: 100%;
+      }
+    }
+  }
+}
+
+
+
